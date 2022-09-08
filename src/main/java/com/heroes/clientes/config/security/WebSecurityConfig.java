@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/v1/client").hasAnyAuthority("ALL_PERMISSIONS")
+                .antMatchers("/v1/client").hasAuthority("ALL_PERMISSIONS")
                 .and()
                 .exceptionHandling().authenticationEntryPoint(new RestAuthenticationEntryPoint())
                 .and()
